@@ -1,0 +1,7 @@
+mixin exhibition-map(data)
+    section.exhibition-map&attributes(attributes)
+        .exhibition-map__container.container.bg
+            h1.exhibition-map__title.title Карта выставки
+                != pugHelpers.Icon.call(locals, {iconName: 'arrow-down', className: 'exhibition-map__title-icon'})
+            .exhibition-map__map
+                img(src="assets/images/content/exhibition-map.png", alt="")

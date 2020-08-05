@@ -1,0 +1,72 @@
+html,
+body
+  height: 100%
+
+.page
+  position: relative
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  background-position: 100% 0
+  background-size: cover
+  +mq($small)
+    background-color: #161b30
+    background-repeat: no-repeat
+    background-position: 50% 0
+
+  color: $white
+  font-family: $f
+  font-size: 14px
+  font-weight: 400
+  line-height: 1.285
+  font-display: swap
+
+  &_contacts
+
+
+  &__inner
+    flex-grow: 1
+    flex-shrink: 0
+    flex-basis: auto
+    overflow: hidden
+
+  &__inner_contacts
+    position: relative
+    &::after
+      z-index: -1
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      content: ''
+      background-color: rgba(0,0,0, .3)
+
+
+.container
+  margin: auto
+  padding-right: 30px
+  padding-left: 30px
+  width: 100%
+  max-width: 1230px
+  +r($medium)
+    padding-right: 15px
+    padding-left: 15px
+
+img
+  max-width: 100%
+  height: auto
+
+
+
+.bg
+  position: relative
+  &::after
+    z-index: -1
+    position: absolute
+    top: 0
+    right: -60px
+    bottom: 0
+    left: -60px
+    content: ''
+    background-color: rgba(0,0,0, .3)

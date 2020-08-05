@@ -1,0 +1,22 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../blocks/head/head.pug
+  include ../blocks/contacts/contacts.pug
+
+
+  head
+    +head(head.defaults)
+  body.page.lazy(data-bg='url(assets/images/general/bg.jpg)')
+    |%=symbols=%
+    .page__inner.page__inner_contacts
+      main.main
+        +contacts()
+
+
+    script(src='%=static=%js/separate-js/lazyload.min.js' defer)
+    script(src='%=static=%js/separate-js/jquery.min.js' defer)
+    //- script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js' defer)
+    //- script(src='%=static=%js/separate-js/slick.min.js' defer)
+
+    script(src='%=static=%js/main%=hash=%%=min=%.js' defer)
